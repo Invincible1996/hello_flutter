@@ -22,7 +22,10 @@ class ListItem extends StatelessWidget {
         children: <Widget>[
           Text(
             'ListItem',
-            style: TextStyle(color: CommonStyle.titleTextColor),
+            style: TextStyle(
+                color: CommonStyle.titleTextColor,
+                fontFamily: 'OpenSans-Italic',
+                fontSize: 16),
           ),
           Icon(
             Icons.keyboard_arrow_right,

@@ -31,6 +31,7 @@ class HomePage extends StatelessWidget {
                           'Search for shared resources',
                           style: TextStyle(
                               fontSize: 13,
+                              fontFamily: 'DMSans-BoldItalic',
                               color: CommonStyle.mentionTextColor),
                         ),
                       )
