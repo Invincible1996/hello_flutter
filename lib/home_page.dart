@@ -1,69 +1,95 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/model/theme_model.dart';
 import 'package:hello_flutter/styles/common_style.dart';
-
 import 'components/list_item.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
+  final List<String> list = ['Container', 'Animation', 'ListView', 'GridView'];
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Expanded(
-                flex: 1,
-                child: Container(
-                  padding: EdgeInsets.only(left: 10),
-                  alignment: Alignment.centerLeft,
-                  height: 36,
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.search,
-                        size: 18,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
-                        child: Text(
-                          'Search for shared resources',
-                          style: TextStyle(
-                              fontSize: 13,
-                              fontFamily: 'DMSans-BoldItalic',
-                              color: CommonStyle.mentionTextColor),
+    print(list[1]);
+    return Consumer<ThemeInfo>(
+        builder: (context, themeInfo, _) => Scaffold(
+              appBar: AppBar(
+                centerTitle: true,
+                title: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Expanded(
+                        flex: 1,
+                        child: Container(
+                          padding: EdgeInsets.only(left: 10),
+                          alignment: Alignment.centerLeft,
+                          height: 36,
+                          child: Row(
+                            children: <Widget>[
+                              Icon(
+                                Icons.search,
+                                size: 18,
+                                color: CommonStyle.placeHolderColor,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 8.0),
+                                child: Text(
+                                  'Search for shared resources',
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontFamily: 'DMSans-BoldItalic',
+                                      color: CommonStyle.mentionTextColor),
+                                ),
+                              )
+                            ],
+                          ),
+                          decoration: BoxDecoration(
+                              color: CommonStyle.pageBackgroundColor,
+                              borderRadius: BorderRadius.circular(18.0)),
+                        )),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 11.0),
+                      child: IconButton(
+                        icon: Icon(
+                          Icons.add,
+                          color: CommonStyle.pageBackgroundColor,
                         ),
-                      )
-                    ],
-                  ),
-                  decoration: BoxDecoration(
+                        onPressed: () {
+                          themeInfo.changeTheme();
+                          themeInfo.addCount();
+                        },
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              body: Column(
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: Container(
                       color: CommonStyle.pageBackgroundColor,
-                      borderRadius: BorderRadius.circular(18.0)),
-                )),
-            IconButton(
-              icon: Icon(
-                Icons.account_box,
-                color: CommonStyle.titleTextColor,
+                      child: ListView.builder(
+                          itemCount: list.length,
+                          itemBuilder: (BuildContext context, int index) =>
+                              ListItem(
+                                item: list[index],
+                              )),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      '${themeInfo.count}',
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    ),
+                    height: 100,
+                    width: MediaQuery.of(context).size.width,
+                    color: Colors.red,
+                  )
+                ],
               ),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.add,
-                color: CommonStyle.titleTextColor,
-              ),
-              onPressed: () {},
-            )
-          ],
-        ),
-      ),
-      body: Container(
-        color: CommonStyle.pageBackgroundColor,
-        child: ListView.builder(
-            itemCount: 10,
-            itemBuilder: (BuildContext context, int index) => ListItem()),
-      ),
-    );
+            ));
   }
 }

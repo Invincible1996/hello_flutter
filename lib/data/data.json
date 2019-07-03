@@ -1,0 +1,23 @@
+[
+    {
+      "type" : "Suye",
+      "id" : "27",
+      "height" : "170",
+      "gender" : "male",
+      "hair_color" : "black"
+    },
+    {
+      "type" : "Surina",
+      "id" : "26",
+      "height" : "160",
+      "gender" : "female",
+      "hair_color" : "brown"
+    },
+    {
+      "type" : "Terigele",
+      "id" : "25",
+      "height" : "174",
+      "gender" : "male",
+      "hair_color" : "black"
+    }
+  ]

@@ -2,7 +2,7 @@
  * @Description: flutter
  * @Author:kevin
  * @since: 2019-06-23 22:26:43
- * @lastTime: 2019-06-23 22:27:23
+ * @lastTime: 2019-07-03 20:54:00
  * @LastAuthor: Tracy
  */
 
@@ -10,6 +10,10 @@ import 'package:flutter/material.dart';
 import 'package:hello_flutter/styles/common_style.dart';
 
 class ListItem extends StatelessWidget {
+  final String item;
+
+  ListItem({Key key, this.item}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +25,7 @@ class ListItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Text(
-            'ListItem',
+            item,
             style: TextStyle(
                 color: CommonStyle.titleTextColor,
                 fontFamily: 'OpenSans-Italic',
