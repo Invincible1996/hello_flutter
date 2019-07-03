@@ -9,7 +9,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(list[1]);
     return Consumer<ThemeInfo>(
         builder: (context, themeInfo, _) => Scaffold(
               appBar: AppBar(

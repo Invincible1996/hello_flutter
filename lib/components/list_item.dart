@@ -28,7 +28,8 @@ class ListItem extends StatelessWidget {
             item,
             style: TextStyle(
                 color: CommonStyle.titleTextColor,
-                fontFamily: 'OpenSans-Italic',
+                fontFamily: 'Raleway',
+                fontStyle: FontStyle.italic,
                 fontSize: 16),
           ),
           Icon(
