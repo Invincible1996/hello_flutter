@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
       builder: (context, themeInfo, _) => MaterialApp(
             title: 'Flutter Demo',
             debugShowCheckedModeBanner: false,
-            theme: themeInfo.themeData,
+            theme: ThemeData(
+                fontFamily: 'Raleway', primaryColor: CommonStyle.themeColor),
             home: HomePage(),
           ),
     );

@@ -5,7 +5,13 @@ import 'components/list_item.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
-  final List<String> list = ['Container', 'Animation', 'ListView', 'GridView'];
+  final List<String> list = [
+    'Container',
+    'Animation',
+    'ListView',
+    'GridView',
+    'TabView'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -73,20 +79,21 @@ class HomePage extends StatelessWidget {
                           itemBuilder: (BuildContext context, int index) =>
                               ListItem(
                                 item: list[index],
+                                index: index,
                               )),
                     ),
                   ),
-                  Container(
-                    alignment: Alignment.center,
-                    child: Text(
-                      '${themeInfo.count}',
-                      style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                    ),
-                    height: 100,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.red,
-                  )
+//                  Container(
+//                    alignment: Alignment.center,
+//                    child: Text(
+//                      '${themeInfo.count}如果痴痴的等某日终于可等到一生中最爱',
+//                      style:
+//                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold,color: Colors.amber),
+//                    ),
+//                    height: 100,
+//                    width: MediaQuery.of(context).size.width,
+//                    color: Colors.red,
+//                  )
                 ],
               ),
             ));
