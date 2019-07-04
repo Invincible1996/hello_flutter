@@ -7,6 +7,7 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/pages/animation_page.dart';
 import 'package:hello_flutter/pages/container_page.dart';
 import 'package:hello_flutter/pages/grid_view_page.dart';
 import 'package:hello_flutter/pages/image_page.dart';
@@ -27,6 +28,8 @@ class ListItem extends StatelessWidget {
             .push(MaterialPageRoute(builder: (_) => ContainerPage()));
         break;
       case 1:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => AnimationPage()));
         break;
       case 2:
         Navigator.of(context)
