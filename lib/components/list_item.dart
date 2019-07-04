@@ -2,14 +2,16 @@
  * @Description: flutter
  * @Author:kevin
  * @since: 2019-06-23 22:26:43
- * @lastTime: 2019-07-04 14:54:35
+ * @lastTime: 2019-07-04 17:16:00
  * @LastAuthor: Tracy
  */
 
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/pages/container_page.dart';
+import 'package:hello_flutter/pages/grid_view_page.dart';
 import 'package:hello_flutter/pages/image_page.dart';
 import 'package:hello_flutter/pages/list_view_page.dart';
+import 'package:hello_flutter/pages/tab_view_page.dart';
 import 'package:hello_flutter/styles/common_style.dart';
 
 class ListItem extends StatelessWidget {
@@ -31,8 +33,12 @@ class ListItem extends StatelessWidget {
             .push(MaterialPageRoute(builder: (_) => ListViewPage()));
         break;
       case 3:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => GridViewPage()));
         break;
       case 4:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => TabViewPage()));
         break;
       case 5:
         Navigator.of(context)
