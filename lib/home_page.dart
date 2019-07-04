@@ -10,7 +10,8 @@ class HomePage extends StatelessWidget {
     'Animation',
     'ListView',
     'GridView',
-    'TabView'
+    'TabView',
+    'Image'
   ];
 
   @override
