@@ -12,6 +12,7 @@ class _AnimationPageState extends State<AnimationPage> {
       appBar: AppBar(
         title: Text('Animation'),
       ),
+      body: Container(),
     );
   }
 }
