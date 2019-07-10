@@ -31,7 +31,8 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
-                fontFamily: 'Raleway', primaryColor: CommonStyle.themeColor),
+//                fontFamily: 'Raleway',
+                primaryColor: CommonStyle.themeColor),
             home: HomePage(),
           ),
     );

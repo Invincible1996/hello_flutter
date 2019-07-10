@@ -2,30 +2,13 @@ import 'package:flutter/material.dart';
 
 class GridViewPage extends StatelessWidget {
   final List<String> imgList = [
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/12.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/13.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/1816.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/40.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/43.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/9.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/12.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/13.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/1816.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/40.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/43.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/9.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/12.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/13.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/1816.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/40.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/43.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/9.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/12.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/13.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/1816.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/40.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/43.jpg',
-    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/9.jpg'
+    'https://bigshot.oss-cn-shanghai.aliyuncs.com/nba/bos.png',
+    'https://bigshot.oss-cn-shanghai.aliyuncs.com/nba/cha.png',
+    'https://bigshot.oss-cn-shanghai.aliyuncs.com/nba/chi.png',
+    'https://bigshot.oss-cn-shanghai.aliyuncs.com/nba/cle.png',
+    'https://bigshot.oss-cn-shanghai.aliyuncs.com/nba/gsw.png',
+    'https://bigshot.oss-cn-shanghai.aliyuncs.com/nba/hou2.png',
+    'https://bigshot.oss-cn-shanghai.aliyuncs.com/nba/phi.png'
   ];
 
   @override
@@ -49,7 +32,7 @@ class GridViewPage extends StatelessWidget {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: NetworkImage(imgList[index]), fit: BoxFit.cover),
-                    color: Colors.red,
+//                    color: Colors.red,
                     gradient: LinearGradient(
                         colors: [Colors.greenAccent, Colors.yellow],
                         begin: Alignment.bottomLeft,

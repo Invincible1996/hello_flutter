@@ -11,7 +11,8 @@ class HomePage extends StatelessWidget {
     'ListView',
     'GridView',
     'TabView',
-    'Image'
+    'Image',
+    'SliverAppBar'
   ];
 
   @override

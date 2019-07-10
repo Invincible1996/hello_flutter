@@ -12,6 +12,7 @@ import 'package:hello_flutter/pages/container_page.dart';
 import 'package:hello_flutter/pages/grid_view_page.dart';
 import 'package:hello_flutter/pages/image_page.dart';
 import 'package:hello_flutter/pages/list_view_page.dart';
+import 'package:hello_flutter/pages/sliver_appbar_page.dart';
 import 'package:hello_flutter/pages/tab_view_page.dart';
 import 'package:hello_flutter/styles/common_style.dart';
 
@@ -47,7 +48,9 @@ class ListItem extends StatelessWidget {
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (_) => ImagePage()));
         break;
-      case 5:
+      case 6:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => SliverAppBarPage()));
         break;
       default:
         break;

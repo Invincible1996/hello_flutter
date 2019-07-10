@@ -8,22 +8,26 @@ class ImagePage extends StatelessWidget {
         title: Text('Image'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(15.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text('NetWork Image GIF'),
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Text(
+                'Use image as a background',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              ),
             ),
-            Image.network(
-                'https://bigshot.oss-cn-shanghai.aliyuncs.com/nab/lilade.gif'),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text('NetWork Image'),
-            ),
-            Image.network(
-                'https://bigshot.oss-cn-shanghai.aliyuncs.com/0912-zeplinsketchplugin_dribbble_4x.png'),
+            Container(
+                height: 240,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6.0),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/12.jpg'),
+                        fit: BoxFit.cover)))
           ],
         ),
       ),
