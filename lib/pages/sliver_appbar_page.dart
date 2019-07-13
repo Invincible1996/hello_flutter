@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/pages/teams_page.dart';
 
 import 'games_page.dart';
 
@@ -15,7 +16,6 @@ class _SliverAppBarPageState extends State<SliverAppBarPage>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _controller = new TabController(length: 4, vsync: this);
   }
@@ -27,9 +27,12 @@ class _SliverAppBarPageState extends State<SliverAppBarPage>
       headerSliverBuilder: _sliverBuilder,
       body: TabBarView(
         controller: _controller,
-        children: choices.map((choice) {
-          return GamesPage();
-        }).toList(),
+        children: <Widget>[
+          GamesPage(),
+          TeamsPage(),
+          TeamsPage(),
+          TeamsPage(),
+        ],
       ),
     ));
   }

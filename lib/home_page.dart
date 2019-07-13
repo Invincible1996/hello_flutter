@@ -12,7 +12,9 @@ class HomePage extends StatelessWidget {
     'GridView',
     'TabView',
     'Image',
-    'SliverAppBar'
+    'SliverAppBar',
+    'CallNative',
+    'LoginPage'
   ];
 
   @override

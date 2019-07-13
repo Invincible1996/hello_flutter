@@ -8,10 +8,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/pages/animation_page.dart';
+import 'package:hello_flutter/pages/call_native_page.dart';
 import 'package:hello_flutter/pages/container_page.dart';
 import 'package:hello_flutter/pages/grid_view_page.dart';
 import 'package:hello_flutter/pages/image_page.dart';
 import 'package:hello_flutter/pages/list_view_page.dart';
+import 'package:hello_flutter/pages/login_page.dart';
 import 'package:hello_flutter/pages/sliver_appbar_page.dart';
 import 'package:hello_flutter/pages/tab_view_page.dart';
 import 'package:hello_flutter/styles/common_style.dart';
@@ -51,6 +53,14 @@ class ListItem extends StatelessWidget {
       case 6:
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (_) => SliverAppBarPage()));
+        break;
+      case 7:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => CallNativePage()));
+        break;
+      case 8:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => LoginPage()));
         break;
       default:
         break;
