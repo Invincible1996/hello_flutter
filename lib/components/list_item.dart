@@ -14,6 +14,7 @@ import 'package:hello_flutter/pages/grid_view_page.dart';
 import 'package:hello_flutter/pages/image_page.dart';
 import 'package:hello_flutter/pages/list_view_page.dart';
 import 'package:hello_flutter/pages/login_page.dart';
+import 'package:hello_flutter/pages/position_page.dart';
 import 'package:hello_flutter/pages/sliver_appbar_page.dart';
 import 'package:hello_flutter/pages/tab_view_page.dart';
 import 'package:hello_flutter/styles/common_style.dart';
@@ -61,6 +62,10 @@ class ListItem extends StatelessWidget {
       case 8:
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (_) => LoginPage()));
+        break;
+      case 9:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => PositionPage()));
         break;
       default:
         break;

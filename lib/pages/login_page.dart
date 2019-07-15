@@ -13,12 +13,18 @@ class LoginPage extends StatelessWidget {
 //        padding: EdgeInsets.only(bottom: 80),
         alignment: Alignment.topCenter,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+//          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(
+              height: 50,
+            ),
             Image.network(
               'https://bigshot.oss-cn-shanghai.aliyuncs.com/nba/bos.png',
               width: 200,
               height: 200,
+            ),
+            SizedBox(
+              height: 50,
             ),
             CommonButton(
               radius: 6.0,
