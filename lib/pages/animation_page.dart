@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class AnimationPage extends StatefulWidget {
@@ -5,57 +7,61 @@ class AnimationPage extends StatefulWidget {
   _AnimationPageState createState() => _AnimationPageState();
 }
 
-class _AnimationPageState extends State<AnimationPage>
-    with TickerProviderStateMixin {
-  AnimationController _controller;
-  Animation<double> _animation;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 2000));
-    _animation = Tween(begin: 50.0, end: 200.0).animate(_controller);
-    _controller.addListener(() {
-      setState(() {});
-    });
-    _animation.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        _controller.reverse();
-      } else if (status == AnimationStatus.dismissed) {
-        _controller.forward();
-      }
-    });
-    _controller.forward();
-  }
-
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-    _controller.dispose();
-  }
+class _AnimationPageState extends State<AnimationPage> {
+  // Define the various properties with default values. Update these properties
+  // when the user taps a FloatingActionButton.
+  double _width = 50;
+  double _height = 50;
+  Color _color = Colors.green;
+  BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Animation'),
+        title: Text('AnimatedContainer Demo'),
       ),
-      body: Container(
-        height: 300,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: NetworkImage(
-                    'https://bigshot.oss-cn-shanghai.aliyuncs.com/wallpaper/1816.jpg'),
-                fit: BoxFit.cover)),
-        child: new Container(
-          margin: new EdgeInsets.only(top: _animation.value, left: 30),
-          height: 50,
-          width: 50,
-          child: new FlutterLogo(),
+      body: Center(
+        child: AnimatedContainer(
+          // Use the properties stored in the State class.
+          width: _width,
+          height: _height,
+          decoration: BoxDecoration(
+            color: _color,
+            borderRadius: _borderRadius,
+          ),
+          // Define how long the animation should take.
+          duration: Duration(seconds: 1),
+          // Provide an optional curve to make the animation feel smoother.
+          curve: Curves.fastOutSlowIn,
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.play_arrow),
+        // When the user taps the button
+        onPressed: () {
+          // Use setState to rebuild the widget with new values.
+          setState(() {
+            // Create a random number generator.
+            final random = Random();
+
+            // Generate a random width and height.
+            _width = random.nextInt(300).toDouble();
+            _height = random.nextInt(300).toDouble();
+
+            // Generate a random color.
+            _color = Color.fromRGBO(
+              random.nextInt(256),
+              random.nextInt(256),
+              random.nextInt(256),
+              1,
+            );
+
+            // Generate a random border radius.
+            _borderRadius =
+                BorderRadius.circular(random.nextInt(100).toDouble());
+          });
+        },
       ),
     );
   }
