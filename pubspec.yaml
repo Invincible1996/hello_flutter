@@ -20,6 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   provider: ^3.0.0+1
+  video_player: ^0.10.1+4
   cupertino_icons: ^0.1.2
 
 dev_dependencies:

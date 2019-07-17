@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -14,6 +15,35 @@ class _AnimationPageState extends State<AnimationPage> {
   double _height = 50;
   Color _color = Colors.green;
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+//    Timer.periodic(Duration(milliseconds: 1000), (timer) {
+//      setState(() {
+//        // Create a random number generator.
+//        final random = Random();
+//
+//        // Generate a random width and height.
+//        _width = random.nextInt(300).toDouble();
+//        _height = random.nextInt(300).toDouble();
+//
+//        // Generate a random color.
+//        _color = Color.fromRGBO(
+//          random.nextInt(256),
+//          random.nextInt(256),
+//          random.nextInt(256),
+//          1,
+//        );
+//
+//        // Generate a random border radius.
+//        _borderRadius = BorderRadius.circular(random.nextInt(100).toDouble());
+//      });
+      // 每隔 1 秒钟会调用一次，如果要结束调用
+//      timer.cancel();
+//    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +70,7 @@ class _AnimationPageState extends State<AnimationPage> {
         child: Icon(Icons.play_arrow),
         // When the user taps the button
         onPressed: () {
-          // Use setState to rebuild the widget with new values.
+//           Use setState to rebuild the widget with new values.
           setState(() {
             // Create a random number generator.
             final random = Random();
@@ -64,5 +94,11 @@ class _AnimationPageState extends State<AnimationPage> {
         },
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
   }
 }
