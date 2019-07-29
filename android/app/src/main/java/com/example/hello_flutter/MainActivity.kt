@@ -15,8 +15,8 @@ class MainActivity : FlutterActivity() {
         GeneratedPluginRegistrant.registerWith(this)
         MethodChannel(flutterView, CHANNEL).setMethodCallHandler { methodCall, result ->
             if (methodCall.method.equals("showToast")) {
-                Toast.makeText(this, "show===", Toast.LENGTH_SHORT).show()
-            } else if (methodCall.method.equals("message")) {
+                Toast.makeText(this, "Flutter call kotlin code", Toast.LENGTH_SHORT).show()
+            } else if (methodCall.method.equals("getAndroidTime")) {
                 result.success(getCurrentTime())
             }
         }
@@ -27,6 +27,6 @@ class MainActivity : FlutterActivity() {
     }
 
     companion object {
-        private val CHANNEL = "samples.flutter.io/battery"
+        private val CHANNEL = "com.flyou.test/android"
     }
 }

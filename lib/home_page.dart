@@ -15,7 +15,9 @@ class HomePage extends StatelessWidget {
     'SliverAppBar',
     'CallNative',
     'LoginPage',
-    'Position'
+    'Position',
+    'Provider',
+    'Flare Animation'
   ];
 
   @override

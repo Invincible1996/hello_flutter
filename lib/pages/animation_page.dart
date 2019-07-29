@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -40,7 +39,7 @@ class _AnimationPageState extends State<AnimationPage> {
 //        // Generate a random border radius.
 //        _borderRadius = BorderRadius.circular(random.nextInt(100).toDouble());
 //      });
-      // 每隔 1 秒钟会调用一次，如果要结束调用
+    // 每隔 1 秒钟会调用一次，如果要结束调用
 //      timer.cancel();
 //    });
   }

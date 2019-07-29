@@ -10,11 +10,13 @@ import 'package:flutter/material.dart';
 import 'package:hello_flutter/pages/animation_page.dart';
 import 'package:hello_flutter/pages/call_native_page.dart';
 import 'package:hello_flutter/pages/container_page.dart';
+import 'package:hello_flutter/pages/flare_animation.dart';
 import 'package:hello_flutter/pages/grid_view_page.dart';
 import 'package:hello_flutter/pages/image_page.dart';
 import 'package:hello_flutter/pages/list_view_page.dart';
 import 'package:hello_flutter/pages/login_page.dart';
 import 'package:hello_flutter/pages/position_page.dart';
+import 'package:hello_flutter/pages/provider_page.dart';
 import 'package:hello_flutter/pages/sliver_appbar_page.dart';
 import 'package:hello_flutter/pages/tab_view_page.dart';
 import 'package:hello_flutter/styles/common_style.dart';
@@ -28,8 +30,7 @@ class ListItem extends StatelessWidget {
   void _onItemPress(int index, BuildContext context) {
     switch (index) {
       case 0:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => ContainerPage()));
+        navigateToPage(context, ContainerPage());
         break;
       case 1:
         Navigator.of(context)
@@ -64,12 +65,21 @@ class ListItem extends StatelessWidget {
             .push(MaterialPageRoute(builder: (_) => LoginPage()));
         break;
       case 9:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => PositionPage()));
+        navigateToPage(context, PositionPage());
+        break;
+      case 10:
+        navigateToPage(context, ProviderPage());
+        break;
+      case 11:
+        navigateToPage(context, FlareAnimation());
         break;
       default:
         break;
     }
+  }
+
+  void navigateToPage(BuildContext context, Widget widget) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) => widget));
   }
 
   @override

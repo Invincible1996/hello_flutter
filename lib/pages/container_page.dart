@@ -105,7 +105,7 @@ class ContainerPage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       '归去来兮，田园将芜胡不归31？既自以心为形役32，奚惆怅而独悲33？悟已往之不谏34，知来者之可追35。实迷途其未远36，觉今是而昨非37。舟遥遥以轻飏38，风飘飘而吹衣。问征夫以前路39，恨晨光之熹微40。',
-                      style: TextStyle(fontFamily: 'Raleway'),
+                      style: TextStyle(fontFamily: 'Raleway',fontSize: 30),
                       textAlign: TextAlign.justify,
                     ),
                   ),
@@ -114,7 +114,7 @@ class ContainerPage extends StatelessWidget {
                   margin: EdgeInsets.only(top: 15),
                   padding: EdgeInsets.all(10.5),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.red,
                     borderRadius: BorderRadius.circular(15.0),
                     boxShadow: [
                       BoxShadow(color: Color(0XFFEEEEEE), blurRadius: 10.0)
