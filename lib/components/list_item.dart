@@ -7,6 +7,7 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/config/application.dart';
 import 'package:hello_flutter/pages/animation_page.dart';
 import 'package:hello_flutter/pages/call_native_page.dart';
 import 'package:hello_flutter/pages/container_page.dart';
@@ -30,7 +31,9 @@ class ListItem extends StatelessWidget {
   void _onItemPress(int index, BuildContext context) {
     switch (index) {
       case 0:
-        navigateToPage(context, ContainerPage());
+//        navigateToPage(context, ContainerPage());
+        var result = "NBA";
+        Application.router.navigateTo(context, "/container?message=$result");
         break;
       case 1:
         Navigator.of(context)
