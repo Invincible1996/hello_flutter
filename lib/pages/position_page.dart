@@ -9,7 +9,7 @@ class PositionPage extends StatelessWidget {
       ),
       body: Container(
         child: Stack(
-          alignment: Alignment.bottomCenter,
+          alignment: Alignment.center,
           children: <Widget>[
             Container(
               width: MediaQuery.of(context).size.width,
@@ -17,6 +17,7 @@ class PositionPage extends StatelessWidget {
               color: Colors.red,
             ),
             Positioned(
+              top: 20,
                 child: Container(
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -26,17 +27,122 @@ class PositionPage extends StatelessWidget {
               child: Wrap(
                 children: <Widget>[
                   Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(9.0),
+//                      border: Border.all(
+//                        color: Colors.grey,
+//                        width: 1
+//                      )
+                    ),
+                    alignment: Alignment.center,
                     width: (MediaQuery.of(context).size.width * .92) / 3,
                     child: Text('AA'),
                   ),
                   Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9.0),
+                        border: Border.all(
+                            color: Colors.grey,
+                            width: 1
+                        )
+                    ),
+                    alignment: Alignment.center,
                     width: (MediaQuery.of(context).size.width * .92) / 3,
                     child: Text('AA'),
                   ),
                   Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9.0),
+                        border: Border.all(
+                            color: Colors.grey,
+                            width: 1
+                        )
+                    ),
+                    alignment: Alignment.center,
                     width: (MediaQuery.of(context).size.width * .92) / 3,
                     child: Text('AA'),
-                  )
+                  ),
+                  Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9.0),
+                        border: Border.all(
+                            color: Colors.grey,
+                            width: 1
+                        )
+                    ),
+                    alignment: Alignment.center,
+                    width: (MediaQuery.of(context).size.width * .92) / 3,
+                    child: Text('AA'),
+                  ),
+                  Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9.0),
+                        border: Border.all(
+                            color: Colors.grey,
+                            width: 1
+                        )
+                    ),
+                    alignment: Alignment.center,
+                    width: (MediaQuery.of(context).size.width * .92) / 3,
+                    child: Text('AA'),
+                  ),
+                  Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9.0),
+                        border: Border.all(
+                            color: Colors.grey,
+                            width: 1
+                        )
+                    ),
+                    alignment: Alignment.center,
+                    width: (MediaQuery.of(context).size.width * .92) / 3,
+                    child: Text('AA'),
+                  ),
+                  Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9.0),
+                        border: Border.all(
+                            color: Colors.grey,
+                            width: 1
+                        )
+                    ),
+                    alignment: Alignment.center,
+                    width: (MediaQuery.of(context).size.width * .92) / 3,
+                    child: Text('AA'),
+                  ),
+                  Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+//                        borderRadius: BorderRadius.circular(9.0),
+                        border: Border.all(
+                            color: Colors.grey,
+                            width: 1
+                        )
+                    ),
+                    alignment: Alignment.center,
+                    width: (MediaQuery.of(context).size.width * .92) / 3,
+                    child: Text('AA'),
+                  ),
+                  Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+//                        borderRadius: BorderRadius.circular(9.0),
+                        border: Border.all(
+                            color: Colors.grey,
+                            width: 1
+                        )
+                    ),
+                    alignment: Alignment.center,
+                    width: (MediaQuery.of(context).size.width * .92) / 3,
+                    child: Text('AA'),
+                  ),
                 ],
               ),
             ))

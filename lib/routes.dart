@@ -10,6 +10,13 @@ class Routes {
   static String listViewPage = "/listViewPage";
   static String gridViewPage = "/gridViewPage";
   static String tabViewPage = "/tabViewPage";
+  static String imageViewPage = "/imageViewPage";
+  static String sliverAppBar = "/sliverAppBar";
+  static String callNative = "/callNative";
+  static String loginPage = "/loginPage";
+  static String position = "/position";
+  static String provider = "/provider";
+  static String flare = "/flare";
 
   static void configureRoutes(Router router) {
     router.notFoundHandler = Handler(
@@ -19,14 +26,40 @@ class Routes {
     });
     router.define(root, handler: rootHandler);
     router.define(containerPage,
-        handler: rootHandler, transitionType: TransitionType.inFromLeft);
+        handler: containerRouteHandler,
+        transitionType: TransitionType.inFromBottom);
     router.define(animationPage,
-        handler: rootHandler, transitionType: TransitionType.material);
+        handler: animationRouteHandler,
+        transitionType: TransitionType.inFromBottom);
     router.define(listViewPage,
-        handler: rootHandler, transitionType: TransitionType.material);
+        handler: listViewRouteHandler,
+        transitionType: TransitionType.inFromBottom);
     router.define(gridViewPage,
-        handler: rootHandler, transitionType: TransitionType.material);
+        handler: gridViewRouteHandler,
+        transitionType: TransitionType.inFromBottom);
     router.define(tabViewPage,
-        handler: rootHandler, transitionType: TransitionType.material);
+        handler: tabViewRouteHandler,
+        transitionType: TransitionType.inFromBottom);
+    router.define(imageViewPage,
+        handler: imageViewRouteHandler,
+        transitionType: TransitionType.inFromBottom);
+    router.define(sliverAppBar,
+        handler: sliverAppBarRouteHandler,
+        transitionType: TransitionType.inFromBottom);
+    router.define(callNative,
+        handler: callNativeRouteHandler,
+        transitionType: TransitionType.inFromBottom);
+    router.define(loginPage,
+        handler: loginPageRouteHandler,
+        transitionType: TransitionType.inFromBottom);
+    router.define(position,
+        handler: positionRouteHandler,
+        transitionType: TransitionType.inFromBottom);
+    router.define(provider,
+        handler: providerRouteHandler,
+        transitionType: TransitionType.inFromBottom);
+    router.define(flare,
+        handler: flareRouteHandler,
+        transitionType: TransitionType.inFromBottom);
   }
 }

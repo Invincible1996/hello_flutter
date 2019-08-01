@@ -8,18 +8,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/config/application.dart';
-import 'package:hello_flutter/pages/animation_page.dart';
-import 'package:hello_flutter/pages/call_native_page.dart';
-import 'package:hello_flutter/pages/container_page.dart';
-import 'package:hello_flutter/pages/flare_animation.dart';
-import 'package:hello_flutter/pages/grid_view_page.dart';
-import 'package:hello_flutter/pages/image_page.dart';
-import 'package:hello_flutter/pages/list_view_page.dart';
-import 'package:hello_flutter/pages/login_page.dart';
-import 'package:hello_flutter/pages/position_page.dart';
-import 'package:hello_flutter/pages/provider_page.dart';
-import 'package:hello_flutter/pages/sliver_appbar_page.dart';
-import 'package:hello_flutter/pages/tab_view_page.dart';
 import 'package:hello_flutter/styles/common_style.dart';
 
 class ListItem extends StatelessWidget {
@@ -31,7 +19,6 @@ class ListItem extends StatelessWidget {
   void _onItemPress(int index, BuildContext context) {
     switch (index) {
       case 0:
-//        navigateToPage(context, ContainerPage());
         var result = "NBA";
         Application.router.navigateTo(context, "/container?message=$result");
         break;
@@ -39,43 +26,37 @@ class ListItem extends StatelessWidget {
         Application.router.navigateTo(context, "/animationPage?");
         break;
       case 2:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => ListViewPage()));
+        Application.router.navigateTo(context, "/listViewPage?");
         break;
       case 3:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => GridViewPage()));
+        Application.router.navigateTo(context, "/gridViewPage?");
         break;
       case 4:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => TabViewPage()));
+        Application.router.navigateTo(context, "/tabViewPage?");
         break;
       case 5:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => ImagePage()));
+        Application.router.navigateTo(context, "/imageViewPage?");
         break;
       case 6:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => SliverAppBarPage()));
+        Application.router.navigateTo(context, "/sliverAppBar?");
         break;
       case 7:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => CallNativePage()));
+        Application.router.navigateTo(context, "/callNative?");
         break;
       case 8:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => LoginPage()));
+        Application.router.navigateTo(context, "/loginPage?");
         break;
       case 9:
-        navigateToPage(context, PositionPage());
+        Application.router.navigateTo(context, "/position?");
         break;
       case 10:
-        navigateToPage(context, ProviderPage());
+        Application.router.navigateTo(context, "/provider?");
         break;
       case 11:
-        navigateToPage(context, FlareAnimation());
+        Application.router.navigateTo(context, "/flare?");
         break;
       default:
+        Application.router.navigateTo(context, "/?");
         break;
     }
   }
