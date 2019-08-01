@@ -36,8 +36,7 @@ class ListItem extends StatelessWidget {
         Application.router.navigateTo(context, "/container?message=$result");
         break;
       case 1:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => AnimationPage()));
+        Application.router.navigateTo(context, "/animationPage?");
         break;
       case 2:
         Navigator.of(context)
