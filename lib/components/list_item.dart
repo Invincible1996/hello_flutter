@@ -55,6 +55,9 @@ class ListItem extends StatelessWidget {
       case 11:
         Application.router.navigateTo(context, "/flare?");
         break;
+      case 12:
+        Application.router.navigateTo(context, "/tmallGoodsList?");
+        break;
       default:
         Application.router.navigateTo(context, "/?");
         break;

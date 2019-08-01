@@ -1,5 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/pages/TmallGoodsList.dart';
 import 'package:hello_flutter/pages/animation_page.dart';
 import 'package:hello_flutter/pages/call_native_page.dart';
 import 'package:hello_flutter/pages/container_page.dart';
@@ -68,3 +69,7 @@ var flareRouteHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return FlareAnimation();
 });
+var tmallGoodsListRouteHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      return TmallGoodsList();
+    });

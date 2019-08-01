@@ -17,6 +17,7 @@ class Routes {
   static String position = "/position";
   static String provider = "/provider";
   static String flare = "/flare";
+  static String tmallGoodsList = "/tmallGoodsList";
 
   static void configureRoutes(Router router) {
     router.notFoundHandler = Handler(
@@ -60,6 +61,9 @@ class Routes {
         transitionType: TransitionType.inFromBottom);
     router.define(flare,
         handler: flareRouteHandler,
+        transitionType: TransitionType.inFromBottom);
+    router.define(tmallGoodsList,
+        handler: tmallGoodsListRouteHandler,
         transitionType: TransitionType.inFromBottom);
   }
 }

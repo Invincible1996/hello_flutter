@@ -17,7 +17,8 @@ class HomePage extends StatelessWidget {
     'LoginPage',
     'Position',
     'Provider',
-    'Flare Animation'
+    'Flare Animation',
+    'TmallGoodsList'
   ];
 
   @override
