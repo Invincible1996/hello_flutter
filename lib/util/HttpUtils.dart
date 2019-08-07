@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:dio/dio.dart';
 
 class HttpUtils {
@@ -17,7 +16,7 @@ class HttpUtils {
   static const String DELETE = 'delete';
 
   // request method
-  static  request(String url, {data, method}) async {
+  static request(String url, {data, method}) async {
     data = data ?? {};
     method = method ?? 'GET';
 
@@ -27,19 +26,14 @@ class HttpUtils {
         url = url.replaceAll(':$key', value.toString());
       }
     });
-
-    /// 打印请求相关信息：请求地址、请求方式、请求参数
-    print('liang-请求地址：【$method $url】');
-    print('liang-请求参数：' + data.toString());
-
     Dio dio = createInstance();
-    Response response;
+    Response response = await dio.request(url,
+        data: data, options: new Options(method: method));
     try {
       response = await dio.request(url,
           data: data, options: new Options(method: method));
       print('响应数据：' + response.data.toString());
     } on DioError catch (e) {
-      /// 打印请求失败相关信息
       print('请求出错：' + e.toString());
     }
     return json.decode(response.data);

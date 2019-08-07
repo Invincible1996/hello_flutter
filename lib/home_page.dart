@@ -18,7 +18,8 @@ class HomePage extends StatelessWidget {
     'Position',
     'Provider',
     'Flare Animation',
-    'TmallGoodsList'
+    'TmallGoodsList',
+    'BottomNavigationBar',
   ];
 
   @override

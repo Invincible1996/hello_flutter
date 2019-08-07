@@ -58,8 +58,11 @@ class ListItem extends StatelessWidget {
       case 12:
         Application.router.navigateTo(context, "/tmallGoodsList?");
         break;
+      case 13:
+        Application.router.navigateTo(context, "/bottomNavigationBar?");
+        break;
       default:
-        Application.router.navigateTo(context, "/?");
+        Application.router.navigateTo(context, "/bottomNavigationBar?");
         break;
     }
   }
