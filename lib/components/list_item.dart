@@ -13,10 +13,12 @@ import 'package:hello_flutter/styles/common_style.dart';
 class ListItem extends StatelessWidget {
   final String item;
   final int index;
+  final Function callBack;
 
-  ListItem({Key key, this.item, this.index}) : super(key: key);
+  ListItem({Key key, this.item, this.index, this.callBack}) : super(key: key);
 
   void _onItemPress(int index, BuildContext context) {
+    callBack(index);
     switch (index) {
       case 0:
         var result = "NBA";

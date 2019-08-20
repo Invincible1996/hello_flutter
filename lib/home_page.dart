@@ -22,6 +22,10 @@ class HomePage extends StatelessWidget {
     'BottomNavigationBar',
   ];
 
+  _callback(int index) {
+    print(index);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<ThemeInfo>(
@@ -89,6 +93,7 @@ class HomePage extends StatelessWidget {
                               ListItem(
                                 item: list[index],
                                 index: index,
+                                callBack: _callback,
                               )),
                     ),
                   ),
